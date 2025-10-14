@@ -39,3 +39,22 @@ Test your luck and logic — can you guess the number between **1 and 100** with
 
 ## 🪄 Folder Structure
 
+guess-it-game/
+│
+├── index.html          
+├── style.css             
+├── script.js         
+├── README.md              
+│
+├── source/                
+│   ├── guess-it-icon.ico  
+│   ├── background.jpg      
+│   ├── logo.png           
+│   ├── sounds/             
+│   │   ├── win.mp3
+│   │   └── lose.mp3
+│   └── other/            
+│
+└── .gitignore             
+
+---
