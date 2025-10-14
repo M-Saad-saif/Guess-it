@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    background: url('./sources/guess\ it\ pc\ bg.png')no-repeat center center/cover;
+    background-size: 101% 118%;
+    image-rendering: pixelated;
+    z-index: -1;
+    opacity: .4;
+    position: fixed;
+}
+
+.intro {
+    background: linear-gradient(88deg, #132d50, #84b1ff, #083455);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 28%;
+    /* border-radius: 6px; */
+    gap: 5px;
+    align-self: anchor-center;
+    justify-self: anchor-center;
+    top: -66%;
+    position: absolute;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.intro h3 {
+    margin-top: 18px;
+}
+
+.intro img {
+    width: 15%;
+}
+
+.first-interface {
+    cursor: pointer;
+}
+
+.first-interface img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+.first-interface h2 {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    align-self: anchor-center;
+    justify-self: anchor-center;
+    top: 71%;
+    right: -4%;
+    font-size: 31px;
+}
+
+.game-container {
+    background: linear-gradient(88deg, #132d50, #000000, #083455);
+    display: flex;
+    flex-direction: column;
+    justify-self: anchor-center;
+    top: 25%;
+    position: absolute;
+    width: 32%;
+    padding: 32px;
+    text-align: center;
+    border: 1px solid #0b006b;
+    border-radius: 9px;
+    color: white;
+    box-shadow: 1px 0px 20px 0px #4b124e;
+}
+
+.guessNumber-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-self: anchor-center;
+}
+
+#guessesNumbers {
+    margin-left: 5px;
+}
+
+.chanceContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-self: anchor-center;
+    margin-top: 5px;
+}
+
+#chances {
+    margin-left: 5px;
+}
+
+#input {
+    margin: 17px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 0.5px;
+}
+
+#validation {
+    font-size: 13px;
+    margin-top: -15px;
+    margin-bottom: 12px;
+    color: red;
+    /* display: none; */
+}
+
+.buttons {
+    margin-top: 18px;
+}
+
+#submitBtn {
+    width: 46%;
+    padding: 2px;
+    border-radius: 6px;
+    border: none;
+    background-color: #0073ec;
+    color: black;
+    font-weight: 600;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+
+}
+
+#submitBtn:hover {
+    transform: scale(1.06);
+    color: white;
+    /* box-shadow: 2px 2px 4px; */
+    cursor: pointer;
+}
+
+#restartBtn {
+    width: 20%;
+    padding: 2px;
+    border-radius: 6px;
+    border: none;
+    background-color: #0073ec;
+    color: black;
+    font-weight: 600;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out box-shadow 0.1s ease-in-out;
+}
+
+#restartBtn:hover {
+    transform: scale(1.06);
+    color: white;
+    /* box-shadow: 2px 2px 4px; */
+    cursor: pointer;
+}
+
+#playagainBtn {
+    margin-top: 4px;
+    width: 30%;
+    padding: 2px;
+    border-radius: 6px;
+    border: none;
+    /* display: none; */
+    align-self: anchor-center;
+    justify-content: center;
+    background-color: #0073ec;
+    color: black;
+    font-weight: 600;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+#playagainBtn:hover {
+    transform: scale(1.06);
+    color: white;
+    /* box-shadow: 2px 2px 4px; */
+    cursor: pointer;
+}
+
+#result-msg {
+    margin-top: 12px;
+}
+
+.mob-first-interface {
+    display: none;
+}
+
+@media screen and (max-width: 600px)and (min-width: 315px) {
+    .first-interface {
+        display: none;
+    }
+
+    .mob-first-interface {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        /* width: 1%; */
+        height: 100%;
+        right: -2%;
+    }
+
+    .game-container {
+        width: 70%;
+    }
+
+    .intro {
+        width: 75%;
+        box-shadow: 0px 0px 20px 4px #072d4a;
+    }
+
+    .container::before {
+        background: url('./sources/guess\ it\ mobile\ bg.png')no-repeat center center/cover;
+        height: 100vh;
+    }
+}

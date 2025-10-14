@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guess it.css">
+    <link rel="shortcut icon" href="./sources/guess it icon.ico" type="image/x-icon">
+    <title>Guess it | SAAD</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first-interface">
+            <img src="./sources/guess it  game screen.png" alt="">
+            <h2>Click anywhere to start</h2>
+        </div>
+        <div class="mob-first-interface">
+            <img src="./sources/guess it mobile 2.png" alt="">
+
+        </div>
+
+        <div class="intro">
+            <img src="./sources/game icon.png" alt="">
+            <h3>Guess it!</h3>
+        </div>
+
+
+        <div class="game-container">
+            <h3>Guess the number between 1 to 100</h3>
+            <input type="text" placeholder="Enter a number" id="input">
+            <p id="validation"></p>
+
+            <div class="guessNumber-container">
+                <p>Your Guesses: </p><span id="guessesNumbers"></span>
+            </div>
+
+            <div class="chanceContainer">
+                <p>Chances: </p><span id="chances">0</span>
+            </div>
+
+            <h2 id="result-msg"></h2>
+
+            <div class="buttons">
+                <button id="submitBtn">Submit</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+
+            <button id="playagainBtn">Play Again</button>
+
+
+        </div>
+    </div>
+
+    <script src="guess it.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then((reg) => {
+                        console.log("service worker registor at", reg.scope)
+                    }).catch((err) => {
+                        console.log("service worker registor failed ", err)
+                    })
+            })
+        }
+
+    </script>
+</body>
+
+</html>
