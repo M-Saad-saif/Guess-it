@@ -47,7 +47,8 @@ guess-it-game/
 ├── README.md              
 ├── service-worker.js
 │
-├── source/                
+├── source/  
+│
 │   ├── guess-it-icon.ico  
 │   ├── background.jpg      
 │   ├── logo.png           
