@@ -45,15 +45,12 @@ guess-it-game/
 ├── style.css             
 ├── script.js         
 ├── README.md              
+├── service-worker.js
 │
 ├── source/                
 │   ├── guess-it-icon.ico  
 │   ├── background.jpg      
 │   ├── logo.png           
-│   ├── sounds/             
-│   │   ├── win.mp3
-│   │   └── lose.mp3
-│   └── other/            
 │
 └── .gitignore             
 
